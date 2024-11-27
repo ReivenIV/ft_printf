@@ -9,16 +9,14 @@ Version: 10
 
 ## Contents
 
-1. [Introduction](#Chapter I: Introduction)
-1. [Introduction](##Chapter I: Introduction)
-2. [Common Instructions](#common-instructions)  
-3. [Mandatory Part](#mandatory-part)  
-4. [Bonus Part](#bonus-part)  
-5. [Submission and Peer-Evaluation](#submission-and-peer-evaluation)  
+1. Introduction
+2. Common Instructions
+3. Mandatory Part
+4. Bonus Part
 
 ---
 
-## Chapter I: Introduction
+# Introduction
 
 You will discover a popular and versatile C function: `printf()`. This exercise is a great opportunity to improve your programming skills. It is of moderate difficulty.
 
