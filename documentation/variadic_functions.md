@@ -10,11 +10,8 @@ Here is the content of the table in Markdown format:
 | `va_arg(va_list ap, type)`  | This one accesses the next variadic function argument. <br><br> - `va_list ap` is the same as above, i.e., a pointer to `argN`. <br> - `type` indicates the data type the `va_list ap` should expect (e.g., `double`, `float`, `int`). |
 | `va_copy(va_list dest, va_list src)` | This makes a copy of the variadic function arguments.                                                                                                                                                |
 | `va_end(va_list ap)`        | This ends the traversal of the variadic function arguments.                                                                                                                                                   |
-[src](https://www.geeksforgeeks.org/variadic-functions-in-c/) 
 
-
-
-
+[src : geeksforgeeks](https://www.geeksforgeeks.org/variadic-functions-in-c/) 
 
 
 ### Examples in real life:

@@ -1,5 +1,14 @@
 # Break it down into manageable parts.
 
+1. [Step 1: Understand the Objective](#Step 1: Understand the Objective)  
+2. [Step 2: Plan the Implementation](#Step 2: Plan the Implementation)  
+3. [Step 3: Start with the Basics*](#Step 3: Start with the Basics*)  
+4. [Step 4: Implement `%c`](#Step 4: Implement `%c`)  
+5. [Step 5: Expand Gradually](#Step 5: Expand Gradually)  
+6. [Step 6: Write Helper Functions](#Step 6: Write Helper Functions)  
+7. [Step 7: Test and Debug](#Step 7: Test and Debug)  
+8. [Step 8: Bonus (Optional)](#Step 8: Bonus (Optional))  
+
 ---
 
 ### **Step 1: Understand the Objective**
