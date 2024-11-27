@@ -5,3 +5,4 @@
 *.exe
 .vscode
 outDebug
+testing/build
