@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/27 16:44:13 by fwebe-ir          #+#    #+#             */
+/*   Updated: 2024/11/27 17:35:32 by fwebe-ir         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -63,6 +75,6 @@ void	test_variadic(const char *str, ...)
 
 int	main(void)
 {
-	test_variadic("test %i %i %i %i %i %c", 50,40,30,20,10,'H');
+	test_variadic("test %i %i %i %i %i %c continue %c %i \n", 50,40,30,20,10,'H', 1, 'K');
 	return (0);
 }
