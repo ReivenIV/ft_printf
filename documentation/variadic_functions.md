@@ -1,6 +1,22 @@
 
 Variadic functions are functions that can take **a variable number of arguments**. Unlike normal functions, which have a fixed number of parameters, variadic functions can handle as many arguments as needed.
 
+Here is the content of the table in Markdown format:
+
+
+| Methods                 | Description                                                                                                                                                                                                                   |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `va_start(va_list ap, argN)` | This enables access to variadic function arguments. <br><br> - `va_list` will be the pointer to the last fixed argument in the variadic function.<br> - `argN` is the last fixed argument in the variadic function.<br><br> From the above variadic function (`function_name(data_type variable_name, ...)`), `variable_name` is the last fixed argument making it the `argN`. Whereas `va_list ap` will be a pointer to `argN` (`variable_name`). |
+| `va_arg(va_list ap, type)`  | This one accesses the next variadic function argument. <br><br> - `va_list ap` is the same as above, i.e., a pointer to `argN`. <br> - `type` indicates the data type the `va_list ap` should expect (e.g., `double`, `float`, `int`). |
+| `va_copy(va_list dest, va_list src)` | This makes a copy of the variadic function arguments.                                                                                                                                                |
+| `va_end(va_list ap)`        | This ends the traversal of the variadic function arguments.                                                                                                                                                   |
+[src](https://www.geeksforgeeks.org/variadic-functions-in-c/) 
+
+
+
+
+
+
 ### Examples in real life:
 - **`printf`**: It can take many arguments, like:
   ```c
