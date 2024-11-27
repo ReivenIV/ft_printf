@@ -11,7 +11,7 @@
 
 ---
 
-### **Step 1: Understand the Objective**
+### Step 1: Understand the Objective
 The goal is to recreate the `printf` function in C. Here's what you need to know:
 
 - **What does `printf` do?** It prints formatted output to the standard output (e.g., terminal).

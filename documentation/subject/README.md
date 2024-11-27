@@ -9,7 +9,8 @@ Version: 10
 
 ## Contents
 
-1. [Introduction](#introduction)  
+1. [Introduction](#Chapter I: Introduction)
+1. [Introduction](##Chapter I: Introduction)
 2. [Common Instructions](#common-instructions)  
 3. [Mandatory Part](#mandatory-part)  
 4. [Bonus Part](#bonus-part)  
