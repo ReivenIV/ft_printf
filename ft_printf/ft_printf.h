@@ -6,7 +6,7 @@
 /*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 16:36:22 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/29 14:47:47 by rita             ###   ########.fr       */
+/*   Updated: 2024/11/29 15:05:40 by rita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 
 # include <unistd.h>
 # include <stdarg.h>
-# include <stdio.h> 
+# include <stdio.h>
 
-int 		ft_printf(const char *src, ...);
+int			ft_printf(const char *src, ...);
 void		ft_putnbr(int n);
-int	    	count_digits(int n);
-void	    ft_putchar(char c);
+int			count_digits(int n);
+void		ft_putchar(char c);
+int			ft_strlen(char *str);
 
 #endif

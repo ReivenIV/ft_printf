@@ -6,11 +6,14 @@
 /*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:53:13 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/29 14:51:24 by rita             ###   ########.fr       */
+/*   Updated: 2024/11/29 15:26:16 by rita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+// TODO printSTR
+// TODO x X(hexadecimal) u(unsigned) %(just a pourcentage) p(pointer)
 
 int ft_print_and_count(const char *src, va_list args, int i)
 {
@@ -23,7 +26,6 @@ int ft_print_and_count(const char *src, va_list args, int i)
 		n = va_arg(args, int);
 		ft_putnbr(n);
 		print_len += count_digits(n);
-		
 	}
 	if (src[i] == '%' && src[i + 1] == 'c')
 	{
@@ -31,6 +33,8 @@ int ft_print_and_count(const char *src, va_list args, int i)
 		ft_putchar(ch);
 		print_len++;
 	}
+	if (src[i] == '%' && src[i + 1] == 's')
+		print_len += ft_putstr(va_arg(args, char *));
 	return (print_len);
 }
 
