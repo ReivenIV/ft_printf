@@ -15,7 +15,10 @@
 
 # include <unistd.h>
 # include <stdarg.h>
+# include <stdio.h> //! to erase
 
-int ft_printf(const char *, ...);
+int ft_printf(const char *src, ...);
+int	ft_putnbr(int n);
+int count_digits(int n);
 
 #endif
