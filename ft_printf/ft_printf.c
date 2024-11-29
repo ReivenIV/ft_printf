@@ -10,74 +10,76 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
-# include <unistd.h>
-# include <stdarg.h>
+#include "ft_printf.h"
 
-
-// void	ft_putchar(char c)
-// {
-// 	write(1, &c, 1);
-// 	return ;
-// }
-//TODO should return double instead of int like that you handle ints and doubles.
-int	ft_putnbr(int n)
+void	ft_putchar(char c)
 {
-	char	c;
-
-	if (n == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-	}
-	if (n < 0)
-	{
-		write(1, "-", 1);
-		n = n * -1;
-	}
-	if (n > 9)
-	{
-		ft_putnbr(n / 10);
-	}
-	c = (n % 10) + '0';
 	write(1, &c, 1);
-	//TODO need to handle size of ints 
-	return (2);
+	return ;
 }
 
 
-int ft_count_print(const char *src, va_list args)
+
+int ft_print_and_count(const char *src, va_list args, int i)
 {
-	int count;
+	int print_len;
 
-	count = 0;
-	while (src[count] != '\0')
+	print_len = 0;
+	if (src[i] == '%' && src[i + 1] == 'i')
+		print_len += ft_putnbr(va_arg(args, int));
+	if (src[i] == '%' && src[i + 1] == 'c')
 	{
-		if (src[count] == '%' && src[count + 1] == 'i')
-			count += ft_putnbr(va_arg(args, int));
-		
-		if (src[count] != '%')
-			write(1, &src[count], 1);
-		count++;
+		int ch = va_arg(args, int);
+		ft_putchar(ch);
+		print_len++;
 	}
-	return (count);
+	return (print_len);
 }
 
-#include <stdio.h>
+int printf_handler(const char *src, va_list args)
+{
+	int i;
+	int print_len;
+
+	i = 0;
+	print_len = 0;
+	while (src[i] != '\0')
+	{
+		if (src[i] == '%')
+		{
+			print_len += ft_print_and_count(src, args, i);
+			i++;
+		}			
+		else {
+			ft_putchar(src[i]);
+			print_len++;
+		}
+		i++;
+	}
+	printf("\n\n- printf_handler count return len = %i\n", print_len); 
+	return (print_len);
+}
+
 int ft_printf(const char *src, ...)
 {
 	int	src_len;
 	va_list args;
 
 	va_start(args, src);
-	src_len = ft_count_print(src, args);
+	src_len = printf_handler(src, args);
 	va_end(args);
-	printf("\n\nsrc_len = %i\n", src_len); //! printing total_len +1
+	printf("- ft_printf return len = %i\n", src_len); 
 	return (src_len);
 }
 
 int	main(void)
 {
+	int n = 50;
+	char c_test = 'H';
+	
 	// test_variadic("test %i %i %i %i %i %c continue testing...\n", 50,40,30,20,10,'H');
-	ft_printf("test %i", 50);
+	//ft_printf("test %i", 50, 'H'); // should return 13
+	ft_printf("test %i and %c", n, c_test); // should return 13
+
 	return (0);
 }
