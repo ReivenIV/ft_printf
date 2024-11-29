@@ -3,30 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:53:13 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/27 18:59:14 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/11/29 14:51:24 by rita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-	return ;
-}
-
-
-
 int ft_print_and_count(const char *src, va_list args, int i)
 {
 	int print_len;
+	int n;
 
 	print_len = 0;
 	if (src[i] == '%' && src[i + 1] == 'i')
-		print_len += ft_putnbr(va_arg(args, int));
+	{
+		n = va_arg(args, int);
+		ft_putnbr(n);
+		print_len += count_digits(n);
+		
+	}
 	if (src[i] == '%' && src[i + 1] == 'c')
 	{
 		int ch = va_arg(args, int);
@@ -72,6 +70,8 @@ int ft_printf(const char *src, ...)
 	return (src_len);
 }
 
+
+//! Just for testing. 
 int	main(void)
 {
 	int n = 50;
