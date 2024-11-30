@@ -6,7 +6,7 @@
 /*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:53:13 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/29 15:26:16 by rita             ###   ########.fr       */
+/*   Updated: 2024/11/30 12:29:14 by rita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int ft_print_and_count(const char *src, va_list args, int i)
 		print_len++;
 	}
 	if (src[i] == '%' && src[i + 1] == 's')
-		print_len += ft_putstr(va_arg(args, char *));
+		print_len = print_len + (ft_putstr(va_arg(args, char *)));
 	return (print_len);
 }
 
@@ -78,12 +78,15 @@ int ft_printf(const char *src, ...)
 //! Just for testing. 
 int	main(void)
 {
-	int n = 50;
-	char c_test = 'H';
+	//int n = 50; // len 2
+	//char c_test = 'H';  // len 1
+	char s_test[16] = "test from s_test"; // len 16
 	
 	// test_variadic("test %i %i %i %i %i %c continue testing...\n", 50,40,30,20,10,'H');
 	//ft_printf("test %i", 50, 'H'); // should return 13
-	ft_printf("test %i and %c", n, c_test); // should return 13
+	//ft_printf("test %i and %c", n, c_test); // should return 13
+	ft_printf("%s\n", s_test); // should return 13
+	
 
 	return (0);
 }
