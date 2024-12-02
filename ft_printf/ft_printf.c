@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:53:13 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/12/02 15:47:29 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/02 18:00:51 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,19 @@
 // TODO printSTR 					DONE
 // TODO %(just a pourcentage) 		DONE
 // TODO x X(hexadecimal) 
-// TODO u(unsigned) 
+// TODO u(unsigned)					DONE
 // TODO p(pointer)
+// TODO d							DONE
 
 int	ft_print_and_count(const char *src, va_list args, int i)
 {
 	int	print_len;
 
 	print_len = 0;
-	if (src[i] == '%' && src[i + 1] == 'i')
-		print_len += ft_print_int(va_arg(args, int));
+	if (src[i] == '%' && (src[i + 1] == 'i' || src[i + 1] == 'd'))
+		print_len += ft_print_int((long int)va_arg(args, int));
+	if (src[i] == '%' && src[i + 1] == 'u')
+		print_len += ft_print_int((long int)va_arg(args, unsigned int));
 	if (src[i] == '%' && src[i + 1] == 'c')
 		print_len += ft_putchar(va_arg(args, int));
 	if (src[i] == '%' && src[i + 1] == '%')
@@ -59,7 +62,7 @@ int	printf_handler(const char *src, va_list args)
 	return (print_len);
 }
 
-int	t_printf(const char *src, ...)
+int	ft_printf(const char *src, ...)
 {
 	int		src_len;
 	va_list	args;
@@ -72,17 +75,17 @@ int	t_printf(const char *src, ...)
 }
 
 //! Just for testing. 
-// int	main(void)
-// {
-// 	int i_test = 50; // len 2
-// 	//char c_test = 'H';  // len 1
-// 	//char s_test[16] = "test from s_test"; // len 16
-// 	//ft_printf("%s\n", s_test); // should return 17 (str + \n)
-// 	//ft_printf("%c\n", c_test); // should return 2
-// 	//ft_printf("%%\n"); // should return 2
-// 	ft_printf("%i\n", i_test); // should return 3
-// test_variadic("test %i %i %c continue testing...\n", 20,10,'H');
-// 	//ft_printf("test %i", 50, 'H'); // should return 13
-// 	//ft_printf("test %i and %c", i_test, c_test); // should return 13
-// 	return (0);
-// }
+int	main(void)
+{
+	//int i_test = 10; // len 2
+	unsigned int u_test = 4294967295;
+	//char c_test = 'H';  // len 1
+	//char s_test[16] = "test from s_test"; // len 16
+	ft_printf("%u\n", u_test); // should return 11
+	//ft_printf("%s\n", s_test); // should return 17 (str + \n)
+	//ft_printf("%c\n", c_test); // should return 2
+	//ft_printf("%%\n"); // should return 2
+	//ft_printf("test %i", 50, 'H'); // should return 13
+	//ft_printf("test %i and %c", i_test, c_test); // should return 13
+	return (0);
+}
