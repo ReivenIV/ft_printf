@@ -3,6 +3,5 @@
 *.a
 *.o
 *.exe
-.vscode
 outDebug
 testing/build
