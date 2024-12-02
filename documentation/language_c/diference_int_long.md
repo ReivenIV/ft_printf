@@ -1,6 +1,4 @@
-Sure! Here's a simple explanation of the difference between `int`, `long`, and `double` in C:
-
----
+# Difference between int, long & double.
 
 ### **Data Types in C: `int`, `long`, and `double`**
 
@@ -46,9 +44,9 @@ Sure! Here's a simple explanation of the difference between `int`, `long`, and `
 ### **Analogy to Understand**
 
 Imagine different containers:
-- **`int`**: A small box to hold smaller numbers.
-- **`long`**: A bigger box to hold much larger numbers.
-- **`double`**: A jar that can hold both whole numbers and fractional numbers.
+- **`int`**: use for comon math less memory usage.
+- **`long`**: you can count stars.
+- **`double`**: prices recipe.
 
 ### **Quick Practice**
 ```c
