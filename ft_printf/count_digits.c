@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 13:47:59 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/12/02 15:22:45 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:33:45 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,22 @@
 
 #include "ft_printf.h"
 
-int count_digits(int n)
+int	count_digits(int n)
 {
-    int count;
+	int	count;
 
-    count = 0;
-    if (n >= 0 && n <= 9)
-        return (1);
-    if (n < 0)
-    {
-        n = n * -1;
-        count++;
-    }
-    while (n != 0)
-    {
-        n = n / 10;
-        count++;
-    }
-    return (count);
+	count = 0;
+	if (n >= 0 && n <= 9)
+		return (1);
+	if (n < 0)
+	{
+		n = n * -1;
+		count++;
+	}
+	while (n != 0)
+	{
+		n = n / 10;
+		count++;
+	}
+	return (count);
 }
