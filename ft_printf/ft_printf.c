@@ -6,7 +6,7 @@
 /*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:53:13 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/12/02 10:10:14 by rita             ###   ########.fr       */
+/*   Updated: 2024/12/02 10:40:26 by rita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,12 @@
 int ft_print_and_count(const char *src, va_list args, int i)
 {
 	int print_len;
-	int n;
 
 	print_len = 0;
 	if (src[i] == '%' && src[i + 1] == 'i')
-	{
-		n = va_arg(args, int);
-		ft_putnbr(n);
-		print_len += count_digits(n);
-	}
+		print_len += ft_print_int(va_arg(args, int));
 	if (src[i] == '%' && src[i + 1] == 'c')
-		print_len+= ft_putchar(va_arg(args, int));
+		print_len += ft_putchar(va_arg(args, int));
 	if (src[i] == '%' && src[i + 1] == '%')
 		print_len+= ft_putchar('%');
 	if (src[i] == '%' && src[i + 1] == 's')
@@ -79,17 +74,18 @@ int ft_printf(const char *src, ...)
 //! Just for testing. 
 int	main(void)
 {
-	//int n = 50; // len 2
+	int i_test = 50; // len 2
 	//char c_test = 'H';  // len 1
 	//char s_test[16] = "test from s_test"; // len 16
 	
 	//ft_printf("%s\n", s_test); // should return 17 (str + \n)
 	//ft_printf("%c\n", c_test); // should return 2
 	//ft_printf("%%\n"); // should return 2
+	ft_printf("%i\n", i_test); // should return 3
 	
 	// test_variadic("test %i %i %i %i %i %c continue testing...\n", 50,40,30,20,10,'H');
 	//ft_printf("test %i", 50, 'H'); // should return 13
-	//ft_printf("test %i and %c", n, c_test); // should return 13
+	//ft_printf("test %i and %c", i_test, c_test); // should return 13
 	
 
 	return (0);
