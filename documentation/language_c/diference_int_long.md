@@ -65,8 +65,3 @@ int main() {
 
     return 0;
 }
-```
-
----
-
-Let me know if you'd like more examples! 😊
