@@ -6,7 +6,7 @@
 /*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 10:11:55 by rita              #+#    #+#             */
-/*   Updated: 2024/12/02 10:18:11 by rita             ###   ########.fr       */
+/*   Updated: 2024/12/02 10:40:12 by rita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int	ft_print_int(int n)
 	ft_putnbr(n);
 	print_len = 0;
 	print_len += count_digits(n);
-	return (n);
+	return (print_len);
 }
