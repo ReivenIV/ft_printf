@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 10:11:55 by rita              #+#    #+#             */
-/*   Updated: 2024/12/02 15:34:02 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/02 17:48:01 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Will handle printing and couting digits. The function is done to reduce
 the amount of lines writen in printf.c/ft_print_and_count 
 */
 
-int	ft_print_int(int n)
+int	ft_print_int(long int n)
 {
 	int	print_len;
 

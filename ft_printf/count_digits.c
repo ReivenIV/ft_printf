@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 13:47:59 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/12/02 15:33:45 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/02 17:47:59 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 #include "ft_printf.h"
 
-int	count_digits(int n)
+int	count_digits(long int n)
 {
 	int	count;
 

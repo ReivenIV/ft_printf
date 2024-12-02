@@ -6,20 +6,16 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 13:34:55 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/12/02 15:49:36 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/02 17:48:04 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr(int n)
+void	ft_putnbr(long int n)
 {
 	char	c;
 
-	if (n == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-	}
 	if (n < 0)
 	{
 		write(1, "-", 1);
