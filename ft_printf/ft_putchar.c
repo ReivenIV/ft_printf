@@ -6,14 +6,14 @@
 /*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 14:17:54 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/29 14:27:30 by rita             ###   ########.fr       */
+/*   Updated: 2024/12/02 10:03:59 by rita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char c)
+int	ft_putchar(char c)
 {
 	write(1, &c, 1);
-	return ;
+	return (1);
 }
