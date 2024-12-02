@@ -6,14 +6,17 @@
 /*   By: rita <rita@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:53:13 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/11/30 12:29:14 by rita             ###   ########.fr       */
+/*   Updated: 2024/12/02 10:10:14 by rita             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-// TODO printSTR
-// TODO x X(hexadecimal) u(unsigned) %(just a pourcentage) p(pointer)
+// TODO printSTR 					DONE
+// TODO %(just a pourcentage) 		DONE
+// TODO x X(hexadecimal) 
+// TODO u(unsigned) 
+// TODO p(pointer)
 
 int ft_print_and_count(const char *src, va_list args, int i)
 {
@@ -28,11 +31,9 @@ int ft_print_and_count(const char *src, va_list args, int i)
 		print_len += count_digits(n);
 	}
 	if (src[i] == '%' && src[i + 1] == 'c')
-	{
-		int ch = va_arg(args, int);
-		ft_putchar(ch);
-		print_len++;
-	}
+		print_len+= ft_putchar(va_arg(args, int));
+	if (src[i] == '%' && src[i + 1] == '%')
+		print_len+= ft_putchar('%');
 	if (src[i] == '%' && src[i + 1] == 's')
 		print_len = print_len + (ft_putstr(va_arg(args, char *)));
 	return (print_len);
@@ -80,12 +81,15 @@ int	main(void)
 {
 	//int n = 50; // len 2
 	//char c_test = 'H';  // len 1
-	char s_test[16] = "test from s_test"; // len 16
+	//char s_test[16] = "test from s_test"; // len 16
+	
+	//ft_printf("%s\n", s_test); // should return 17 (str + \n)
+	//ft_printf("%c\n", c_test); // should return 2
+	//ft_printf("%%\n"); // should return 2
 	
 	// test_variadic("test %i %i %i %i %i %c continue testing...\n", 50,40,30,20,10,'H');
 	//ft_printf("test %i", 50, 'H'); // should return 13
 	//ft_printf("test %i and %c", n, c_test); // should return 13
-	ft_printf("%s\n", s_test); // should return 13
 	
 
 	return (0);
