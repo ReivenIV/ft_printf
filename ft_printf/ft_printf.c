@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:53:13 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/12/02 18:00:51 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/03 12:26:40 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ int	ft_print_and_count(const char *src, va_list args, int i)
 		print_len += ft_putchar('%');
 	if (src[i] == '%' && src[i + 1] == 's')
 		print_len = print_len + (ft_putstr(va_arg(args, char *)));
+	if (src[i] == '%' && src[i + 1] == 'p')
+		print_len = print_len + (ft_print_p(va_arg(args, void *)));
+
 	return (print_len);
 }
 
@@ -47,15 +50,9 @@ int	printf_handler(const char *src, va_list args)
 	while (src[i] != '\0')
 	{
 		if (src[i] == '%')
-		{
-			print_len += ft_print_and_count(src, args, i);
-			i++;
-		}
+			print_len += ft_print_and_count(src, args, i++);
 		else
-		{
-			ft_putchar(src[i]);
-			print_len++;
-		}
+			print_len += ft_putchar(src[i]);
 		i++;
 	}
 	printf("\n\n- printf_handler count return len = %i\n", print_len);
@@ -81,7 +78,9 @@ int	main(void)
 	unsigned int u_test = 4294967295;
 	//char c_test = 'H';  // len 1
 	//char s_test[16] = "test from s_test"; // len 16
-	ft_printf("%u\n", u_test); // should return 11
+
+	//ft_printf("%u\n", u_test); // should return 11
+	ft_printf("%p\n", &u_test); // should return 11
 	//ft_printf("%s\n", s_test); // should return 17 (str + \n)
 	//ft_printf("%c\n", c_test); // should return 2
 	//ft_printf("%%\n"); // should return 2
