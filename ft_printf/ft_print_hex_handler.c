@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_hex_handler.c                                :+:      :+:    :+:   */
+/*   ft_print_hex_handler.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 13:54:00 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/12/03 14:39:51 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:58:25 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+
+
 // will transform any base 10 unsigned int into hex.
-int	ft_putnbr_hex_lowercasse(unsigned long n, int n_len)
+int	ft_putnbr_hex_lowercasse(long n, int n_len)
 {
 	char	*hex_digits;
 
@@ -24,7 +26,7 @@ int	ft_putnbr_hex_lowercasse(unsigned long n, int n_len)
 	return (n_len);
 }
 
-int	ft_putnbr_hex_uppercase(unsigned long n, int n_len)
+int	ft_putnbr_hex_uppercase(long n, int n_len)
 {
 	char	*hex_digits;
 
@@ -35,15 +37,14 @@ int	ft_putnbr_hex_uppercase(unsigned long n, int n_len)
 	return (n_len);
 }
 
-int	print_hex_handler(char type, int n_len, unsigned long n)
+int	ft_print_hex_handler(char type, long n)
 {
 	int	len;
 
-	//printf("\n%c\n%i\n%lu", type, n_len, n);
-	if (type == 'u')
-		len = ft_putnbr_hex_uppercase(n, n_len);
-	else if (type == 'l')
-		len = ft_putnbr_hex_lowercasse(n, n_len);
+	if (type == 'X')
+		len = ft_putnbr_hex_uppercase(n, 0);
+	else if (type == 'x')
+		len = ft_putnbr_hex_lowercasse(n, 0);
 	else
 		return (0);
 	return (len);		
