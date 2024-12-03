@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 15:48:38 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/12/02 17:48:09 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/03 12:22:20 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ int		count_digits(long int n);
 int		ft_putchar(char c);
 int		ft_strlen(char *str);
 int		ft_putstr(char *str);
+int		ft_putnbr_hex(unsigned long n, int n_len);
+int		ft_print_p(void *p);
 
 #endif
