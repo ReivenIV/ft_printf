@@ -6,7 +6,7 @@
 #    By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/02 15:22:01 by fwebe-ir          #+#    #+#              #
-#    Updated: 2024/12/02 15:57:03 by fwebe-ir         ###   ########.fr        #
+#    Updated: 2024/12/03 12:30:53 by fwebe-ir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,10 @@
 NAME = libftprintf.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = count_digits.c ft_putchar.c ft_putstr.c ft_printf.c ft_print_int.c \
-ft_putnbr.c ft_strlen.c
+SRCS = ft_printf.h ft_putchar.c ft_strlen.c \
+count_digits.c ft_print_int.c ft_putnbr.c \
+ft_printf.c ft_print_prt.c ft_putstr.c \
+
 OBJS = $(SRCS:.c=.o)
 HEADERS = ft_printf.h 
 
