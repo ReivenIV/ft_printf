@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 15:06:29 by rita              #+#    #+#             */
-/*   Updated: 2024/12/02 15:50:55 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/03 12:25:13 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ int	ft_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
-	printf("\nputstr len = %i\n", i);
 	return (i);
 }
