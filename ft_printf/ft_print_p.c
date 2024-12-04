@@ -12,15 +12,13 @@
 
 #include "ft_printf.h"
 
-// int	ft_print_hex_handler(long n, int n_len, char format)
 int	ft_print_p(void *p)
 {
 	long	adrs;
-	int				len;
+	int		len;
 
 	adrs = (long)p;
 	ft_print_str("0x");
-	
-	len = ft_print_hex_handler(adrs, 0, 'x');	
+	len = ft_print_hex_handler((int)adrs, 0, 'x');
 	return (len + 2);
 }

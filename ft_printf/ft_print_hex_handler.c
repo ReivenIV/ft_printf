@@ -12,21 +12,17 @@
 
 #include "ft_printf.h"
 
-
-
 // will transform any base 10 unsigned int into hex.
 int	ft_print_hex_handler(int n, int n_len, char format)
 {
-	char	*hex_digits;
-    unsigned int   num;
-
+	char			*hex_digits;
+	unsigned int	num;
 
 	if (format == 'X')
 		hex_digits = "0123456789ABCDEF";
-    else
-	    hex_digits = "0123456789abcdef";
-
-    num = (unsigned int)n;
+	else
+		hex_digits = "0123456789abcdef";
+	num = (unsigned int)n;
 	if (num >= 16)
 		n_len = ft_print_hex_handler(num / 16, n_len, format);
 	ft_print_c(hex_digits[num % 16]);
