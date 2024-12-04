@@ -39,7 +39,7 @@ int	ft_print_and_count(const char *src, va_list args, int i)
 	if (src[i] == '%' && type == 'p')
 		len += (ft_print_p(va_arg(args, void *)));
 	if (src[i] == '%' && (type == 'x' || type == 'X'))
-		len += ft_print_hex_handler((long)va_arg(args, int), 0, type);
+		len += ft_print_hex_handler(va_arg(args, int), 0, type);
 	return (len);
 }
 

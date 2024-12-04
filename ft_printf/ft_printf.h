@@ -25,6 +25,6 @@ int		ft_print_c(char c);
 int		ft_strlen(char *str);
 int		ft_print_str(char *str);
 int		ft_print_p(void *p);
-int		ft_print_hex_handler(long n, int n_len, char format);
+int		ft_print_hex_handler(int n, int n_len, char format);
 
 #endif

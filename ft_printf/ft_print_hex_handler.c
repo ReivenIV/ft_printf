@@ -15,10 +15,10 @@
 
 
 // will transform any base 10 unsigned int into hex.
-int	ft_print_hex_handler(long n, int n_len, char format)
+int	ft_print_hex_handler(int n, int n_len, char format)
 {
 	char	*hex_digits;
-    unsigned long   num;
+    unsigned int   num;
 
 
 	if (format == 'X')
@@ -26,7 +26,7 @@ int	ft_print_hex_handler(long n, int n_len, char format)
     else
 	    hex_digits = "0123456789abcdef";
 
-    num = (unsigned long)(unsigned int)n;
+    num = (unsigned int)n;
 	if (num >= 16)
 		n_len = ft_print_hex_handler(num / 16, n_len, format);
 	ft_print_c(hex_digits[num % 16]);
