@@ -6,12 +6,13 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 09:56:01 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/12/03 16:52:55 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/04 09:48:45 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+// int	ft_print_hex_handler(long n, int n_len, char format)
 int	ft_print_p(void *p)
 {
 	long	adrs;
@@ -19,6 +20,7 @@ int	ft_print_p(void *p)
 
 	adrs = (long)p;
 	ft_print_str("0x");
-	len = ft_putnbr_hex_lowercasse(adrs, 0);
+	
+	len = 	len = ft_print_hex_handler(adrs, 0, 'x');	
 	return (len + 2);
 }
