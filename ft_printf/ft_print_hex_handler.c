@@ -26,8 +26,8 @@ int	ft_print_hex_handler(long n, int n_len, char format)
     else
 	    hex_digits = "0123456789abcdef";
 
-    num = (unsigned long)n;
-	if (n >= 16)
+    num = (unsigned long)(unsigned int)n;
+	if (num >= 16)
 		n_len = ft_print_hex_handler(num / 16, n_len, format);
 	ft_print_c(hex_digits[num % 16]);
 	return (n_len + 1);
