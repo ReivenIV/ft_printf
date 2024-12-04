@@ -21,6 +21,6 @@ int	ft_print_p(void *p)
 	adrs = (long)p;
 	ft_print_str("0x");
 	
-	len = 	len = ft_print_hex_handler(adrs, 0, 'x');	
+	len = ft_print_hex_handler(adrs, 0, 'x');	
 	return (len + 2);
 }
