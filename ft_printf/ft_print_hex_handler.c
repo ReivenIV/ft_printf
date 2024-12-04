@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 13:54:00 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/12/04 09:57:13 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/04 10:04:55 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,17 @@
 int	ft_print_hex_handler(long n, int n_len, char format)
 {
 	char	*hex_digits;
+    unsigned long   num;
+
 
 	if (format == 'X')
 		hex_digits = "0123456789ABCDEF";
-	hex_digits = "0123456789abcdef";
+    else
+	    hex_digits = "0123456789abcdef";
+
+    num = (unsigned long)n;
 	if (n >= 16)
-		n_len = ft_putnbr_hex_lowercasse(n / 16, n_len + 1, format);
-	ft_print_c(hex_digits[n % 16]);
-	return (n_len);
+		n_len = ft_print_hex_handler(num / 16, n_len, format);
+	ft_print_c(hex_digits[num % 16]);
+	return (n_len + 1);
 }
