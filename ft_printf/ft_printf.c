@@ -6,7 +6,7 @@
 /*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 13:53:13 by fwebe-ir          #+#    #+#             */
-/*   Updated: 2024/12/03 17:02:33 by fwebe-ir         ###   ########.fr       */
+/*   Updated: 2024/12/04 09:57:24 by fwebe-ir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,24 +21,26 @@
 
 int	ft_print_and_count(const char *src, va_list args, int i)
 {
-	int	print_len;
+	int	len;
+	char	type;
 
-	print_len = 0;
-	if (src[i] == '%' && (src[i + 1] == 'i' || src[i + 1] == 'd'))
-		print_len += ft_print_int((long int)va_arg(args, int));
-	if (src[i] == '%' && src[i + 1] == 'u')
-		print_len += ft_print_int((long int)va_arg(args, unsigned int));
-	if (src[i] == '%' && src[i + 1] == 'c')
-		print_len += ft_putchar(va_arg(args, int));
-	if (src[i] == '%' && src[i + 1] == '%')
-		print_len += ft_putchar('%');
-	if (src[i] == '%' && src[i + 1] == 's')
-		print_len = print_len + (ft_print_str(va_arg(args, char *)));
-	if (src[i] == '%' && src[i + 1] == 'p')
-		print_len = print_len + (ft_print_p(va_arg(args, void *)));
-	if (src[i] == '%' && (src[i + 1] == 'x' || src[i + 1] == 'X'))
-		print_len += ft_print_hex_handler(src[i + 1],(long)va_arg(args, int));
-	return (print_len);
+	type = src[i + 1];
+	len = 0;
+	if (src[i] == '%' && (type == 'i' || type == 'd'))
+		len += ft_print_int((long int)va_arg(args, int));
+	if (src[i] == '%' && type == 'u')
+		len += ft_print_int((long int)va_arg(args, unsigned int));
+	if (src[i] == '%' && type == 'c')
+		len += ft_print_c(va_arg(args, int));
+	if (src[i] == '%' && type == '%')
+		len += ft_print_c('%');
+	if (src[i] == '%' && type == 's')
+		len += (ft_print_str(va_arg(args, char *)));
+	if (src[i] == '%' && type == 'p')
+		len += (ft_print_p(va_arg(args, void *)));
+	if (src[i] == '%' && (type == 'x' || type == 'X'))
+		len += ft_print_hex_handler((long)va_arg(args, int), 0, type);
+	return (len);
 }
 
 int	printf_handler(const char *src, va_list args)
@@ -53,7 +55,7 @@ int	printf_handler(const char *src, va_list args)
 		if (src[i] == '%')
 			print_len += ft_print_and_count(src, args, i++);
 		else
-			print_len += ft_putchar(src[i]);
+			print_len += ft_print_c(src[i]);
 		i++;
 	}
 	return (print_len);
