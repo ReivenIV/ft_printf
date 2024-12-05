@@ -12,13 +12,34 @@
 
 #include "ft_printf.h"
 
+/*
+The data coming to ft_print_p is a super long number in base10 we compres it 
+to base16 and we add "0x" for the adresse standar.
+*/
+static int	ft_print_hex(unsigned long n, int n_len)
+{
+	char			*hex_digits;
+
+	hex_digits = "0123456789abcdef";
+	if (n >= 16)
+		n_len = ft_print_hex(n / 16, n_len);
+	ft_print_c(hex_digits[n % 16]);
+	return (n_len + 1);
+}
+
 int	ft_print_p(void *p)
 {
-	long	adrs;
+	unsigned long	adrs;
 	int		len;
 
-	adrs = (long)p;
+	len = 0;
+    if (!p)
+    {
+        len = ft_print_str("(nil)");
+        return (len);
+    }
+	adrs = (unsigned long)p;
 	ft_print_str("0x");
-	len = ft_print_hex_handler((int)adrs, 0, 'x');
+	len = ft_print_hex(adrs, 0);
 	return (len + 2);
 }
