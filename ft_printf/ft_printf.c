@@ -71,23 +71,3 @@ int	ft_printf(const char *src, ...)
 	va_end(args);
 	return (src_len);
 }
-
-// //! Just for testing. 
-//int	main(void)
-// {
-// 	//int i_test = 10; // len 2
-// 	//int u_test = 4294967295;
-// 	//char c_test = 'H';  // len 1
-// 	//char s_test[16] = "test from s_test"; // len 16
-// 	//char s_null[] = NULL; 
-
-// 	//ft_printf("%u\n", u_test); // should return 11
-// 	//ft_printf("%x\n", u_test); // should return 11
-// 	//ft_printf("%s\n", s_test); // should return 17 (str + \n)
-// 	ft_printf("%s\n", NULL); // should return 17 (str + \n)
-// 	//ft_printf("%c\n", c_test); // should return 2
-// 	//ft_printf("%%\n"); // should return 2
-// 	//ft_printf("test %i", 50, 'H'); // should return 13
-// 	//ft_printf("test %i and %c", i_test, c_test); // should return 13
-// 	return (0);
-// }
