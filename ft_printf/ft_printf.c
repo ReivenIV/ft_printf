@@ -12,13 +12,6 @@
 
 #include "ft_printf.h"
 
-// TODO printSTR 					DONE
-// TODO %(just a pourcentage) 		DONE
-// TODO x X(hexadecimal) 			DONE
-// TODO u(unsigned)					DONE
-// TODO p(pointer)					!need fix
-// TODO d							DONE
-
 int	ft_print_and_count(const char *src, va_list args, int i)
 {
 	int		len;
