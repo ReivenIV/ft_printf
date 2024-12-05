@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_print_and_count(const char *src, va_list args, int i)
+static int	ft_print_and_count(const char *src, va_list args, int i)
 {
 	int		len;
 	char	type;
@@ -36,7 +36,7 @@ int	ft_print_and_count(const char *src, va_list args, int i)
 	return (len);
 }
 
-int	printf_handler(const char *src, va_list args)
+static int	printf_handler(const char *src, va_list args)
 {
 	int	i;
 	int	print_len;
