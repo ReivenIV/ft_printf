@@ -18,7 +18,7 @@ to base16 and we add "0x" for the adresse standar.
 */
 static int	ft_print_hex(unsigned long n, int n_len)
 {
-	char			*hex_digits;
+	char	*hex_digits;
 
 	hex_digits = "0123456789abcdef";
 	if (n >= 16)
@@ -30,14 +30,14 @@ static int	ft_print_hex(unsigned long n, int n_len)
 int	ft_print_p(void *p)
 {
 	unsigned long	adrs;
-	int		len;
+	int				len;
 
 	len = 0;
-    if (!p)
-    {
-        len = ft_print_str("(nil)");
-        return (len);
-    }
+	if (!p)
+	{
+		len = ft_print_str("(nil)");
+		return (len);
+	}
 	adrs = (unsigned long)p;
 	ft_print_str("0x");
 	len = ft_print_hex(adrs, 0);
