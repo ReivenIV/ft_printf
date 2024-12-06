@@ -2,13 +2,13 @@
 
 - [ ] Learn about variadic functionns. 
 - [ ] Think if you want or not do the bonus. (will impact the code)
-      - [ ] Do you want/need to use linked lists, mallocs, crazy things ?? 
+     - - [ ] Do you want/need to use linked lists, mallocs, crazy things ?? 
 - [ ] understand and test printf behaviors : 
      - - [ ] `%%`
      - - [ ] `%c`
      - - [ ] `%s`
      - - [ ] `%i`
-     - - [ ] `%d`
+     - - [ ] `%d` (remember that %d is not about the dataype double)
      - - [ ] `%u`
      - - [ ] `%x`
      - - [ ] `%X`

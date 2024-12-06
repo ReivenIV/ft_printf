@@ -1,3 +1,4 @@
+# Variadic functions
 
 Variadic functions are functions that can take **a variable number of arguments**. Unlike normal functions, which have a fixed number of parameters, variadic functions can handle as many arguments as needed.
 
