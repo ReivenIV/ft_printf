@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: darling <darling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 15:48:38 by fwebe-ir          #+#    #+#             */
 /*   Updated: 2024/12/04 09:57:27 by fwebe-ir         ###   ########.fr       */

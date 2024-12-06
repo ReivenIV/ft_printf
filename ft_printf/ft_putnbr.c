@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: darling <darling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 13:34:55 by fwebe-ir          #+#    #+#             */
 /*   Updated: 2024/12/02 17:48:04 by fwebe-ir         ###   ########.fr       */

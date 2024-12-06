@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex_handler.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: darling <darling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 13:54:00 by fwebe-ir          #+#    #+#             */
 /*   Updated: 2024/12/04 10:04:55 by fwebe-ir         ###   ########.fr       */

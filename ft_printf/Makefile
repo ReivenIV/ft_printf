@@ -3,7 +3,7 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+         #
+#   By: darling <darling@student.42.fr>            +#+  +:+       +#+          #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/02 15:22:01 by fwebe-ir          #+#    #+#              #
 #    Updated: 2024/12/04 09:57:31 by fwebe-ir         ###   ########.fr        #

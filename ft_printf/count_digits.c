@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   count_digits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fwebe-ir <fwebe-ir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: darling <darling@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 13:47:59 by fwebe-ir          #+#    #+#             */
 /*   Updated: 2024/12/02 17:47:59 by fwebe-ir         ###   ########.fr       */
